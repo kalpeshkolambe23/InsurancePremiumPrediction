@@ -14,15 +14,18 @@ st.title("Insurance Premium Prediction")
 sex = st.selectbox('Please select gender', ('male', 'female'))
 
 ## for age Column
-age = st.text_input('Enter Age', 18)
+#age = st.text_input('Enter Age', 18)
+age = st.number_input('Enter Age', min_value=0, max_value=90, value=18, step=1)
 age = int(age)
 
+
+
 # for BMI Column
-bmi = st.text_input('Enter BMI', 18)
+bmi = st.number_input('Enter BMI', min_value=10.0, max_value=50.0, value=18.0, step=0.1)
 bmi = float(bmi)
 
 ## for children Column
-children = st.selectbox('Please select number of children ', (0,1,2,3,4,5))
+children = st.number_input('Enter no of childrens', min_value=0, max_value=5, value=2, step=1)
 children = int(children)
 
 ## for smokers Column
